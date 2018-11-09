@@ -15,5 +15,15 @@
       <h1 class="species">Cats</h1>
       <h1 class="species">Pigs</h1>
       <h1 class="size">Large</h1>
+      <onload="brython(1)">
+      <script type="text/python"> from browser import document, alert
+
+      def echo(ev):
+    alert("Hello {} !".format(document["zone"].value))
+
+      document["test"].bind("click", echo)
+      </script>
+      <p>Your name is : <input id="zone" autocomplete="off">
+      <button id="test">clic !</button>
     </body>
 </html>
